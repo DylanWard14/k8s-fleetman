@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: fleetman-api-gateway
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: api-gateway
   ports:
     - name: http
       port: 8080
-      nodePort: 30030
